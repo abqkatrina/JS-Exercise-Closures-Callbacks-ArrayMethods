@@ -270,11 +270,10 @@ function firstNamesAllCaps(runners) {
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
 function getRunnersByTShirtSize(runners, tShirtSize) {
-  let sizeList = [];
-  runners.filter((shirt_size) => {if (shirt_size === tShirtSize) {sizeList.push(`${runners.shirt_size}, ${runners.first_name}, ${runners.last_name}`)};
-});
-return sizeList;
+  const listSize = runners.filter((item) => item.shirt_size === tShirtSize);
+  return listSize;
 }
+
 
 /**
  * ### Challenge `tallyUpDonations`
@@ -337,9 +336,10 @@ function counterMaker() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(max) {
+
 }
+
 
 /////////////// END OF CHALLENGE ///////////////
 /////////////// END OF CHALLENGE ///////////////
